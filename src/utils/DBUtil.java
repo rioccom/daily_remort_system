@@ -1,3 +1,4 @@
+//DAO用ファイル
 package utils;
 
 import javax.persistence.EntityManager;
