@@ -94,6 +94,7 @@ button {
 	background-color: #f8d7da;
 }
 
+
 /*▼index.jsp作成と同時に追記▼*/
 table#employee_list th {
 	width: 30%;
@@ -106,8 +107,15 @@ table#employee_list td {
 }
 
 tr.row1 {
-		background-color: #f2f2f2;
+	background-color: #f2f2f2;
 }
 tr.row0 {
-		background-color: #ffffff;
+	background-color: #ffffff;
 }
+
+
+/*▼セレクトボックスの表示部分▼*/
+select {
+	height: 30px;
+}
+
