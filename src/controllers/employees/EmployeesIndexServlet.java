@@ -26,8 +26,8 @@ public class EmployeesIndexServlet extends HttpServlet {
 	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//emを生成
-		EntityManager em = DBUtil.createEntityManager();
+		
+		EntityManager em = DBUtil.createEntityManager();//emを生成
 			
 			int page = 1;
 			
