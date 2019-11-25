@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/index.html")
 public class TopPageIndexServlet extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 	
 
@@ -20,6 +21,12 @@ public class TopPageIndexServlet extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		if(request.getSession().getAttribute("flush") != null) {                                     //オブジェクトrequestについてセッション開始＋もしセッション属性flushがnulllでないなら
+			request.setAttribute("flush", request.getSession().getAttribute("flush"));               //属性flushにセッション属性flushの内容をセット？
+			request.getSession().removeAttribute("flush");                                                //セッションの属性flushを削除
+		}
+		
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/topPage/index.jsp"); //index.jspにフォワード
 		rd.forward(request, response);
 	}
