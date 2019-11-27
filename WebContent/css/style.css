@@ -160,5 +160,9 @@ table#report_list .report_action {
 	width: 13%;
 }
 
+/*▼改行まわりの改善で字が小さくなる対策▼*/
+pre {
+	font-family: "Hiragino Kaku Gothic Pro",Meiryo,"MS PGothic",Helvetica,Arial,sans-serif;
+}
 
 
