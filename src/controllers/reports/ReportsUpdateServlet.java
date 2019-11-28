@@ -48,8 +48,8 @@ public class ReportsUpdateServlet extends HttpServlet {
 				em.close();                                                             //★EntityManager破棄
 				
 				request.setAttribute("_token", request.getSession().getId());                                //└→属性_tokenにセッションIdを代入する。
-				request.setAttribute("report", r);                                                                   //     属性reportにr を代入する。
-				request.setAttribute("errors", errors);                                                            //     属性errorsにerorrsを代入する。
+				request.setAttribute("report", r);                                                                   //      属性reportにr を代入する。
+				request.setAttribute("errors", errors);                                                            //      属性errorsにerorrsを代入する。
 				
 				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reports/edit.jsp");
 				rd.forward(request, response);                                                                      //     edit.jspにフォワードする //終//
